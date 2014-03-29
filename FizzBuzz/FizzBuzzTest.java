@@ -9,16 +9,18 @@ public class FizzBuzzTest extends TestCase {
 
 		FizzBuzz myFizzBuzz = new MyFizzBuzz();
 
-//		String fizz = myFizzBuzz.calc(3);
-//		String buzz = myFizzBuzz.calc(5);
-//		String fizzbuzz = myFizzBuzz.calc(15);
-//		String other = myFizzBuzz.calc(11);
+		assertEquals("Fizz",      myFizzBuzz.calc(3));
+		assertEquals("Buzz",      myFizzBuzz.calc(5));
+		assertEquals("Fizz Buzz", myFizzBuzz.calc(15));
 
-		for(int i = 0 ; i < 20 ; i++){
-			assertEquals("Fizz", i);
-			assertEquals("Buzz", i);
-			assertEquals("Fizz Buzz", i);
-			assertEquals("11", i);
-		}
+		assertEquals("-1", myFizzBuzz.calc(-1));
+		assertEquals("0",  myFizzBuzz.calc(0));
+		assertEquals("1",  myFizzBuzz.calc(1));
+
+		assertEquals("2",   myFizzBuzz.calc(2));
+		assertEquals("4",   myFizzBuzz.calc(4));
+		assertEquals("2",   myFizzBuzz.calc(6));
+		assertEquals("14",  myFizzBuzz.calc(14));
+		assertEquals("16",  myFizzBuzz.calc(16));
 	}
 }
