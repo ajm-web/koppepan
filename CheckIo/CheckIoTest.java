@@ -14,7 +14,7 @@ public class CheckIoTest extends TestCase {
 		assertFalse(checkIo.checkio("asasasasasasasaas"));
 		assertFalse(checkIo.checkio("QWERTYqwerty"));
 		assertFalse(checkIo.checkio("123456123456"));
-		assertFalse(checkIo.checkio("QwErTy911poqqqq"));
+		assertTrue(checkIo.checkio("QwErTy911poqqqq"));
 
 	}
 }
