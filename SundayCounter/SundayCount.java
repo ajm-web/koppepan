@@ -36,15 +36,12 @@ public class SundayCount{
 			}
 			System.out.println(y_now + "/" + m_now + "/" + d_now);
 
-			if (!(   y_now <= y_from
-			      && m_now <= m_from
-			      && d_now <  d_from))
-			{
+			if(d_now == 1){
 				numOfSunday += 1;
 			}
 
 			// 日付をインクリメント
-			d_now += 1;
+			d_now += 7;
 			int md = this.getNumberOfDateBy(y_now, m_now);
 			if (d_now > md) {
 				m_now += 1;
@@ -60,6 +57,8 @@ public class SundayCount{
 			}
 			}
 		}
+
+		System.out.println(numOfSunday);
 
 		return numOfSunday;
 	}
