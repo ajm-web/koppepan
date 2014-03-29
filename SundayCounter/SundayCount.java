@@ -28,13 +28,13 @@ public class SundayCount{
 		int numOfSunday = 0;
 
 		for (;;) {
-			System.out.println(y_now + "/" + m_now + "/" + d_now);
 			if (   y_now >= y_to
 			    && m_now >= m_to
 			    && d_now >  d_to)
 			{
 				break;
 			}
+			System.out.println(y_now + "/" + m_now + "/" + d_now);
 
 			if (!(   y_now <= y_from
 			      && m_now <= m_from
@@ -51,8 +51,13 @@ public class SundayCount{
 				d_now -= md;
 			}
 			if (m_now > 12) {
+				if(  y_now >= y_to
+					&& m_now >= m_to){
+					break;
+				}else{
 				m_now = 1;
 				y_now += 1;
+			}
 			}
 		}
 
