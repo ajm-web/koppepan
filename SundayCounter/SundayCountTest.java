@@ -9,10 +9,11 @@ public class SundayCountTest extends TestCase {
 
 		SundayCount sundayCount = new SundayCount();
 
-		assertTrue(sundayCount.sundaycount(1988));	// 4で割り切れるためTrue
-		assertTrue(sundayCount.sundaycount(2000));	// 400で割り切れるためTrue
-		assertFalse(sundayCount.sundaycount(1959));	// 4で割り切れないためFalse
+		assertTrue(sundayCount.isLeapYear(1988));	// 4で割り切れるためTrue
+		assertTrue(sundayCount.isLeapYear(2000));	// 400で割り切れるためTrue
+		assertFalse(sundayCount.isLeapYear(1959));	// 4で割り切れないためFalse
 		assertFalse(sundayCount.isLeapYear(1990));	// 400で割り切れず、100で割り切れるためFalse
 
+		sundayCount.sundaycount(1901, 1, 1, 2000, 12, 31);
 	}
 }
