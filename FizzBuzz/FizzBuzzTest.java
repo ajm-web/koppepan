@@ -19,7 +19,6 @@ public class FizzBuzzTest extends TestCase {
 
 		assertEquals("2",   myFizzBuzz.calc(2));
 		assertEquals("4",   myFizzBuzz.calc(4));
-		assertEquals("2",   myFizzBuzz.calc(6));
 		assertEquals("14",  myFizzBuzz.calc(14));
 		assertEquals("16",  myFizzBuzz.calc(16));
 	}
