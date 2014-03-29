@@ -1,14 +1,5 @@
 public class CheckIo{
 	public Boolean checkio(String ch){
-		if (ch.length() < 10) { return false; }
-
-		if (   !ch.matches(".*[A-Z].*")
-			|| !ch.matches(".*[a-z].*")
-			|| !ch.matches(".*[0-9].*"))
-		{
-			return false;
-		}
-
-		return true;
+		return ch.matches("^(?=.{10,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).*$")?true:false;
 	}
 }
