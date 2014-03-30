@@ -14,6 +14,6 @@ public class SundayCountTest extends TestCase {
 		assertFalse(sundayCount.isLeapYear(1959));	// 4で割り切れないためFalse
 		assertFalse(sundayCount.isLeapYear(1990));	// 400で割り切れず、100で割り切れるためFalse
 
-		sundayCount.sundaycount(1901, 1, 1, 2000, 12, 31);
+		assertEquals(171, sundayCount.sundaycount(1901, 1, 1, 2000, 12, 31));
 	}
 }
